@@ -1,0 +1,234 @@
+:root,
+:root[data-theme="dark"] {
+  --primary-color: #f0f0f0;
+  --primary-bg-color: #111217;
+  --secondary-bg-color: #28292e;
+  --border-color: #28292e;
+  --title-color: #9a9a9c;
+  --text-color: #9a9a9c;
+  --link-color: #9a9a9c;
+  --icon-color: #c7c8c9;
+}
+
+:root,
+:root[data-theme="ligth"] {
+  --primary-color: #0b0b0f;
+  --primary-bg-color: #e9e9e9;
+  --secondary-bg-color: #c7c8c9;
+  --border-color: #c7c8c9;
+  --title-color: #0b0b0f;
+  --text-color: #28292e;
+  --link-color: #28292e;
+  --icon-color: #56575a;
+}
+
+body {
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
+  font-family: "Ysabeau Infant", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+i {
+  color: var(--icon-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__brand .brand__text {
+  margin: 0;
+  padding: 0.55rem;
+}
+
+.header__brand .brand__logo {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.header__nav {
+  align-items: center;
+  width: 100vw;
+  justify-content: center;
+}
+
+#toggleTheme {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+#projetos {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-bg-color);
+}
+
+.menu__item {
+  width: auto;
+}
+
+.menu--principal {
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu__link.active {
+  font-weight: bold;
+}
+
+.menu__link.active .menu__text {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.menu__text {
+  color: var(--text-color);
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.project-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+.section__title {
+  padding-top: 3rem;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 2.5rem;
+}
+
+.section__text {
+  padding: 0.625rem;
+  text-align: center;
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.gif-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section__gif {
+  border-radius: 5rem;
+}
+
+#sobre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#contato .section__title {
+  padding-bottom: 2rem;
+}
+
+.list__contatos {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.list__contatos li {
+  margin: 10px 0;
+  gap: 1rem;
+}
+
+.list__contatos a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.project-card {
+  border: 1px solid var(--primary-color);
+  padding: 1.5rem;
+  border-radius: 0.625rem;
+  text-align: center;
+}
+
+.pagination {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  padding: 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  background: var(--secondary-bg-color);
+  color: var(--text-color);
+  user-select: none;
+}
+
+footer {
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+  background: var(--secondary-bg-color);
+  color: var(--primary-color);
+}
+
+@media (max-width: 600px) {
+  .header {
+    width: 100vw;
+  }
+  .header__nav .menu__text {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .project-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
